@@ -3,7 +3,6 @@ const progress = document.querySelector(".progress_line");
 const next = document.getElementById("next");
 const prev = document.getElementById("prev");
 const steps = document.querySelectorAll(".step");
-
 // buttons :
 let currentActive = 1;
 // next
