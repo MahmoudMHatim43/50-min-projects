@@ -1,0 +1,60 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.target_image {
+    /* design */
+    background: url('https://www.lifewire.com/thmb/nABgUWcLKd6QW8g-0mRjYl2Vjeo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/how-to-fix-it-when-whatsapp-images-and-videos-arent-showing-in-gallery-cd3fbdebb44d4e659b7f867ac0541884.jpg') no-repeat center center/cover;
+    border: 5px solid;
+    overflow: hidden;
+    /* size */
+    width: 50vw;
+    height: 50vh;
+    z-index: -1;
+    /* position */
+    position: relative;
+}
+
+.blur_effect {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    bottom: -20px;
+    left: -20px;
+    background: inherit;
+    filter: blur(20px);
+}
+
+.loading_precent {
+    /* design */
+    color: rgb(0, 0, 0);
+    font-size: x-large;
+    /* position */
+    position: absolute;
+    left: 45%;
+    top: 90%;
+}
+
+.btn {
+    background-color: burlywood;
+    opacity: 0.7;
+    cursor: pointer;
+    margin-top: 50px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
