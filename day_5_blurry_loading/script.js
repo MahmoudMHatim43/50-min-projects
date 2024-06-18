@@ -3,12 +3,12 @@ const blurEffect = document.querySelector(".blur_effect");
 const loadButton = document.querySelector(".btn");
 
 let load = 0;
-
+let n;
 const scale = (num, in_min, in_max, out_min, out_max) => {
 	return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
 };
 loadButton.addEventListener("click", () => {
-	let n = setInterval(blurring, 80);
+	n = setInterval(blurring, 80);
 });
 function blurring() {
 	load++;
