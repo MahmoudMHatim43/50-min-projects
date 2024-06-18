@@ -1,5 +1,4 @@
 const cards = document.querySelectorAll(".card");
-
 cards.forEach((card) => {
 	card.addEventListener("mouseover", () => {
 		removeActiveClasses();
@@ -9,7 +8,6 @@ cards.forEach((card) => {
 		removeActiveClasses();
 	});
 });
-
 let removeActiveClasses = () => {
 	cards.forEach((card) => {
 		card.classList.remove("active");
