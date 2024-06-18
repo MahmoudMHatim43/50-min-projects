@@ -1,0 +1,142 @@
+/* imports and links */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* variables */
+:root {
+    --step-text-color-on: black;
+    --step-text-color-off: grey;
+    --line-border-fill: blue;
+    --line-border-empty: grey;
+}
+
+body {
+    /* design */
+    font-family: 'Playwrite DE Grund';
+    /* size */
+    width: 100vw;
+    height: 100vh;
+    /* layout and box-model */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* containers */
+.progress_container {
+    /* size */
+    width: 50vw;
+    /* layout and box-model */
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+
+.progress {
+    /* position */
+    position: relative;
+    /* size */
+    width: 50vw;
+    height: 5vh;
+    /* layout and box-model */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress_buttons_container {
+    /* size */
+    width: 15vw;
+    /* layout and box-model */
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.step {
+    /* design */
+    background-color: white;
+    color: var(--step-text-color-off);
+    border: 1px solid var(--line-border-empty);
+    border-radius: 50%;
+    /* layout and box-model */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* size */
+    width: 30px;
+    height: 30px;
+    /* animation */
+    transition: 0.3s ease 0.7s;
+}
+
+.step.active {
+    /* design */
+    color: var(--step-text-color-on);
+    border: 1px solid var(--line-border-fill);
+    /* animation */
+    transition: 0.3s ease 0.7s;
+}
+
+/* lines */
+/* main line */
+.progress::before {
+    content: '';
+    /* design */
+    background-color: black;
+    opacity: 0.2;
+    /* position */
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    /* layout and box-model */
+    padding: 1.2px;
+    /* size */
+    width: 100%;
+}
+
+/* follow-up line */
+.progress_line {
+    /* design */
+    background-color: var(--line-border-fill);
+    /* position */
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    /* layout and box-model */
+    padding: 1.2px;
+    /* size */
+    width: 0%;
+    /* animation */
+    transition: 1s ease;
+}
+
+/* buttons */
+.btn {
+    /* design */
+    font-family: inherit;
+    font-size: small;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: rgb(230, 230, 230, 1);
+    border: 0px;
+    border-radius: 25px;
+    /* size */
+    width: 50px;
+    /* animation */
+    transition: 0.3s ease;
+}
+
+.btn:active {
+    /* animation */
+    transition: 0.3s ease;
+    transform: scale(0.75);
+}
