@@ -43,12 +43,23 @@ body {
     border-radius: 10px;
     /* layout and box-model */
     padding: 5px 20px 5px 20px;
-    left: 40%;
-    top: 90%;
+    left: 50%;
+    top: 95%;
+    transform: translateX(-50%) translateY(-50%);
     /* position */
     position: absolute;
     /* animation */
-    transition: 2s ease;
+    transition: 1s ease;
+}
+
+.xbox .btn:hover {
+    background-color: rgb(0, 128, 0, 0.7);
+    border-color: rgb(0, 128, 0, 0.7);
+}
+
+.playstation .btn:hover {
+    background-color: rgb(0, 0, 255, 0.7);
+    border-color: rgb(0, 0, 255, 0.7);
 }
 
 .xbox {
@@ -63,6 +74,10 @@ body {
     position: relative;
     /* animation */
     transition: 2s ease;
+}
+
+.xbox h1 {
+    color: rgb(0, 128, 0, 0.7);
 }
 
 .xbox.show {
