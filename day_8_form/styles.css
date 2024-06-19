@@ -139,3 +139,17 @@ i {
     /* layout and box-model */
     margin-right: 10px;
 }
+
+.fa-eye {
+    cursor: pointer;
+    position: absolute;
+    left: 100%;
+    bottom: 10px;
+}
+
+.fa-eye-slash {
+    cursor: pointer;
+    position: absolute;
+    left: 100%;
+    bottom: 10px;
+}
