@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap");
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* design */
+    font-family: "Playwrite DE Grund", cursive;
+    overflow: hidden;
+    /* size */
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    /* layout and box-model */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        'one two';
+    /* size */
+    width: 100vw;
+    height: 100vh;
+    /* position */
+    position: relative;
+    display: grid;
+    /* animation */
+    transition: 1s ease;
+}
+
+.btn {
+    /* design */
+    text-decoration: none;
+    color: white;
+    background-color: #333;
+    opacity: 1;
+    border: 1px double white;
+    border-radius: 10px;
+    /* layout and box-model */
+    padding: 5px 20px 5px 20px;
+    left: 40%;
+    top: 90%;
+    /* position */
+    position: absolute;
+    /* animation */
+    transition: 2s ease;
+}
+
+.xbox {
+    /* design */
+    opacity: 0.85;
+    text-align: center;
+    background: url('https://media.wired.com/photos/5fa5dc3dba670daaf8e97a8d/master/pass/games_gear_series-x.jpg') no-repeat center center/cover;
+    color: silver;
+    /* layout and box-model */
+    grid-area: one;
+    /* position */
+    position: relative;
+    /* animation */
+    transition: 2s ease;
+}
+
+.xbox.show {
+    /* design */
+    opacity: 1;
+    /* animation */
+    transition: 2s ease;
+}
+
+.playstation {
+    /* design */
+    opacity: 0.7;
+    text-align: center;
+    background: url('https://images.augustman.com/wp-content/uploads/sites/2/2023/07/05233014/ps5.jpeg') no-repeat center center/cover;
+    color: black;
+    /* layout and box-model */
+    grid-area: two;
+    /* position */
+    position: relative;
+    /* animation */
+    transition: 2s ease;
+}
+
+.playstation.show {
+    /* design */
+    opacity: 1;
+    /* animation */
+    transition: 2s ease;
+}
