@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap");
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* design */
+    font-family: "Playwrite DE Grund", cursive;
+    font-size: 14px;
+    background-color: #ff99b9;
+    background-image:
+        radial-gradient(at 59% 13%, hsla(229, 84%, 67%, 1) 0px, transparent 50%),
+        radial-gradient(at 60% 39%, hsla(183, 67%, 78%, 1) 0px, transparent 50%),
+        radial-gradient(at 80% 23%, hsla(98, 61%, 73%, 1) 0px, transparent 50%),
+        radial-gradient(at 31% 16%, hsla(25, 88%, 73%, 1) 0px, transparent 50%),
+        radial-gradient(at 13% 35%, hsla(198, 74%, 68%, 1) 0px, transparent 50%),
+        radial-gradient(at 30% 1%, hsla(271, 91%, 70%, 1) 0px, transparent 50%),
+        radial-gradient(at 74% 39%, hsla(144, 99%, 77%, 1) 0px, transparent 50%);
+    /* layout and box-model */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* size */
+    width: 100vw;
+    height: 100vh;
+    /* position */
+}
+
+.container {
+    /* design */
+    color: black;
+    border-radius: 10px 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 4px 8px rgba(255, 255, 255, 0.8);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+    /* size */
+    width: 500px;
+    height: 500px;
+    /* position */
+    position: relative;
+}
+
+form {
+    /* layout and box-model */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* size */
+    width: 100%;
+    height: 100%;
+}
+
+.container h2 {
+    /* position */
+    position: absolute;
+    top: 10%;
+}
+
+.controle {
+    /* position */
+    position: relative;
+    /* layout and box-model */
+    margin: 20px;
+    width: 60%;
+}
+
+input.field {
+    /* design */
+    font-family: "Playwrite DE Grund", cursive;
+    font-size: 14px;
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid gray;
+    background: transparent;
+    /* animation */
+    width: 100%;
+    height: 40px;
+    transition: 2s ease;
+}
+
+.icon {
+    /* design */
+    cursor: pointer;
+    padding: 3px;
+    opacity: 0.2;
+    /* position */
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    /* animation */
+    transform: translateX(-50%);
+    transition: 0.5s ease;
+}
+
+.icon.start {
+    /* design */
+    cursor: pointer;
+    opacity: 1;
+    /* position */
+    left: 50%;
+    bottom: 90%;
+    /* animation */
+    transition: 0.5s ease;
+}
+
+button {
+    /* design */
+    cursor: pointer;
+    font-family: "Playwrite DE Grund", cursive;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: rgba(128, 128, 128, 0);
+    box-shadow: inset 1px 1px 5px rgba(255, 255, 255, 0.8);
+    /* position */
+    position: absolute;
+    bottom: 120px;
+}
+
+p {
+    /* position */
+    position: absolute;
+    bottom: 60px;
+}
+
+p a {
+    /* design */
+    text-decoration: none;
+    color: rgb(60, 120, 255);
+}
+
+i {
+    /* layout and box-model */
+    margin-right: 10px;
+}
