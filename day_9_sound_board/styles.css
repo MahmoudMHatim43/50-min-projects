@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap");
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* design */
+    font-family: "Playwrite DE Grund", cursive;
+    font-size: 14px;
+    background-color: #ff99b9;
+    background-image:
+        radial-gradient(at 59% 13%, hsla(229, 84%, 67%, 1) 0px, transparent 50%),
+        radial-gradient(at 60% 39%, hsla(183, 67%, 78%, 1) 0px, transparent 50%),
+        radial-gradient(at 80% 23%, hsla(98, 61%, 73%, 1) 0px, transparent 50%),
+        radial-gradient(at 31% 16%, hsla(25, 88%, 73%, 1) 0px, transparent 50%),
+        radial-gradient(at 13% 35%, hsla(198, 74%, 68%, 1) 0px, transparent 50%),
+        radial-gradient(at 30% 1%, hsla(271, 91%, 70%, 1) 0px, transparent 50%),
+        radial-gradient(at 74% 39%, hsla(144, 99%, 77%, 1) 0px, transparent 50%);
+    /* size */
+    width: 100vw;
+    height: 100vh;
+}
+
+button {
+    /* desing */
+    font-family: inherit;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    color: black;
+    outline: none;
+    /* layout and box-model */
+}
+
+.container {
+    /* desing */
+    /* layout and box-model */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* size */
+    width: 100%;
+    height: 30vh;
+}
+
+button {
+    /* desing */
+    opacity: 0.7;
+    cursor: pointer;
+    font-size: 16x;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 4px 8px rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    /* layout and box-model */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    /* size */
+    height: 50px;
+    width: 100px;
+    transition: 0.5s ease;
+}
+
+button:hover {
+    opacity: 1;
+    border-radius: 40px;
+    height: 80px;
+}

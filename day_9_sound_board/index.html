@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+  <!-- css style -->
+  <link rel="stylesheet" href="styles.css">
+  <title>Sound Board</title>
+</head>
+
+<body>
+  <h1 style="text-align: center;">Click to descover sounds</h1>
+  <div class="container">
+    <audio id="applause" src="sounds/applause.mp3"></audio>
+    <button id="applausebtn">Sound 1</button>
+
+    <audio id="boo" src="sounds/boo.mp3"></audio>
+    <button id="boobtn">Sound 2</button> <!--👈🤣 id.slice(0, -3) returns 'boob'-->
+
+    <audio id="gasp" src="sounds/gasp.mp3"></audio>
+    <button id="gaspbtn">Sound 3</button>
+
+    <audio id="tada" src="sounds/tada.mp3"></audio>
+    <button id="tadabtn">Sound 4</button>
+
+    <audio id="victory" src="sounds/victory.mp3"></audio>
+    <button id="victorybtn">Sound 5</button>
+
+    <audio id="wrong" src="sounds/wrong.mp3"></audio>
+    <button id="wrongbtn">Sound 6</button>
+  </div>
+  <!-- script -->
+  <script src="script.js"></script>
+</body>
+
+</html>
