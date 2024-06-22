@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap");
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* design */
+    font-family: "Playwrite DE Grund", cursive;
+    background-color: #c3cbdc;
+    background-image: linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%);
+    text-align: center;
+    /* layout and box-model */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    /* size */
+    width: 100vw;
+    height: 500vh;
+    /* position */
+    position: relative;
+}
+
+nav {
+    /* design */
+    font-size: 14px;
+    background-color: rgba(0, 70, 255, 0.25);
+    border-radius: 25px;
+    box-shadow: 1px 1px 5px, -1px -1px 5px white;
+    /* layout and box-model */
+    padding: 10px;
+    /* size */
+    width: 100px;
+    /* position */
+    position: fixed;
+    top: 10px;
+    left: 100px;
+    /* animation */
+    transition: 1s ease;
+}
+
+nav li {
+    transition: 1s ease 1s;
+    display: none;
+}
+
+nav.active {
+    /* design */
+    overflow: hidden;
+    font-size: 14px;
+    background-color: rgba(0, 70, 255, 0.25);
+    border-radius: 25px;
+    /* layout and box-model */
+    display: inline-flex;
+    align-items: center;
+    gap: 10%;
+    padding: 10px;
+    /* size */
+    width: 90%;
+    /* position */
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* animation */
+    transition: 2s ease;
+}
+
+nav.active li {
+    display: block;
+}
+
+li,
+a,
+img {
+    /* design */
+    text-decoration: none;
+    color: black;
+    list-style: none;
+}
+
+.fa-chevron-up {
+    /* design */
+    cursor: pointer;
+    /* position */
+    position: absolute;
+    right: 10px;
+    top: 40%;
+    transform: rotate(90deg);
+    /* animation */
+    transition: 2s ease;
+}
+
+.fa-chevron-up.open {
+    /* design */
+    cursor: pointer;
+    /* position */
+    transform: rotate(-90deg);
+    /* animation */
+    transition: 1s ease;
+}
