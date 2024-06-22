@@ -23,7 +23,7 @@ async function getJoke() {
 getJoke();
 function getJoke() {
 	const config = {
- 		headrs: {
+ 		headers: {
  			 'key': 'value'
  			Accept: "application/json",
  		},
