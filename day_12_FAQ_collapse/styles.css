@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap");
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* design */
+    font-family: "Playwrite DE Grund", cursive;
+    background-color: #e1e1e1;
+    text-align: center;
+    /* layout and box-model */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* size */
+    width: 100vw;
+    height: 100vh;
+    /* position */
+    position: relative;
+}
+
+h1 {
+    /* position */
+    position: absolute;
+    top: 20px;
+
+}
+
+.container {
+    /* design */
+    font-size: 14px;
+    /* layout and box-model */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    /* size */
+    min-width: 40%;
+    min-height: 80%;
+    padding: 10px;
+}
+
+.faq {
+    /* design */
+    background-color: #c8c8c8;
+    border-radius: 20px;
+    margin: 5px;
+    box-shadow: 1px 1px 5px black, -1px -1px 5px white;
+    /* layout and design */
+    flex: 1;
+    /* size */
+    width: 100%;
+    /* position */
+    position: relative;
+    /* animation */
+    transition: 0.5s ease;
+
+}
+
+.faq_title {
+    /* position */
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.faq_text {
+    /* layout and box-model */
+    display: none;
+    /* position */
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    flex-wrap: wrap;
+}
+
+.faq.active {
+    /* layout and box-model */
+    flex: 2;
+    /* animation */
+    transition: 0.5s ease;
+}
+
+.faq.active .faq_text {
+    /* layout and box-model */
+    display: block;
+}
+
+.faq.active i {
+    /* layout and box-model */
+    display: block;
+    /* position */
+    transform: rotateX(0deg);
+    /* animation */
+    transition: 0.5s ease;
+}
+
+i {
+    /* design */
+    cursor: pointer;
+    /* position */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transform: rotateX(180deg);
+    /* animation */
+    transition: 0.5s ease;
+}
