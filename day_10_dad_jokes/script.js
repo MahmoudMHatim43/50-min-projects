@@ -18,34 +18,8 @@ async function getJoke() {
 	// Update the content of the jokeElement with the fetched joke and two emojis
 	jokeElement.innerHTML = `${result.joke} `;
 }
-
-// why this didn't Work! Comment here please:
-/* // Call the function to Get a joke from 'https://icanhazdadjoke.com'
-getJoke();
-function getJoke() {
-	// A variable that holds the object and headers value to be more organized
-	const config = {
- 		headrs: {
- 			 'key': 'value'
- 			Accept: "application/json",
- 		},
- 	};
-    // fetch("https://icanhazdadjoke.com", config) give us a promise back
-    // .then we get the json data from the respond using .json()
-    // .then give us the actual data
- 	fetch("https://icanhazdadjoke.com", config)
- 		.then((respond) => respond.json())
- 		.then((data) => console.log(data));
-}
-
-Error message 👇 
-Uncaught (in promise)
-SyntaxError: Unexepected token '<', "<!DOCTYPE " ... is not valid JSON
-    Promise.then (async)
-    getJoke         @script.js:19
-    (anonymous)     @script.js:5
-<------------------------------------------------------------------>
-while this worked:
+/*
+// simple
 getJoke();
 function getJoke() {
 	const config = {
