@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap");
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* design */
+    font-family: "Playwrite DE Grund", cursive;
+    background-color: #4d4855;
+    background-image: linear-gradient(20deg, #4d4855 0%, #000000 74%);
+    text-align: center;
+    /* layout and box-model */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* size */
+    width: 100vw;
+    height: 100vh;
+    /* position */
+    position: relative;
+}
+
+h1 {
+    /* design */
+    color: #e1e1e1;
+    /* position */
+    position: absolute;
+    top: 50px;
+}
+
+.key {
+    /* design */
+    background-color: rgb(60, 60, 60);
+    color: #e1e1e1;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px white, -1px -1px 5px gray;
+    text-align: center;
+    overflow: hidden;
+    /* layout and box-model */
+    display: inline-flex;
+    justify-content: center;
+    align-items: start;
+    margin: 10px;
+    padding: 15px;
+    /* size */
+    min-width: 150px;
+    min-height: 80px;
+    /* position */
+    position: relative;
+}
+
+.key.main {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+small {
+    /* design */
+    background-color: rgb(95, 95, 255);
+    color: white;
+    font-size: 16px;
+    /* position */
+    position: absolute;
+    bottom: 0;
+    /* size */
+    width: 100%;
+}
