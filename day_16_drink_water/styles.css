@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap");
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --water-color: rgba(0, 0, 255, 0.663);
+}
+
+body {
+    /* design */
+    overflow: hidden;
+    font-family: "Playwrite DE Grund", cursive;
+    font-size: 14px;
+    background-color: #c3cbdc;
+    background-image: linear-gradient(180deg, #c3cbdc 0%, #edf1f4 74%);
+    text-align: center;
+    /* layout and box-model */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* size */
+    width: 100vw;
+    height: 100vh;
+    /* position */
+    position: relative;
+}
+
+.amount_unfilled {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main_cup {
+    /* design */
+    overflow: hidden;
+    border: 4px solid;
+    border-radius: 0px 0px 30px 30px;
+    /* layout and box-model */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    /* size */
+    height: 300px;
+    width: 100px;
+    /* animaton */
+    transition: 1s ease;
+    /* position */
+    position: relative;
+}
+
+div.main_cup {
+    /* animaton */
+    transition: 1s ease;
+}
+
+#precentage {
+    /* design */
+    color: white;
+    background-color: var(--water-color);
+    /* layout and box-model */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* size */
+    width: 100%;
+    height: 0%;
+    /* position */
+    position: absolute;
+    bottom: 0;
+    /* animation */
+    transition: 1s ease;
+}
+
+.small_cups {
+    /* layout and box-model */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+    /* size */
+    width: 240px;
+}
+
+.small_cup {
+    /* design */
+    cursor: pointer;
+    border: 2px solid;
+    border-radius: 0px 0px 15px 15px;
+    /* layout and box-model */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    /* size */
+    height: 125px;
+    width: 60px;
+    /* animaton */
+    transition: 0.5s ease;
+}
+
+.small_cup span {
+    /* design */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.full {
+    /* design */
+    border: 2px solid black;
+    background-color: var(--water-color);
+    color: white;
+}
