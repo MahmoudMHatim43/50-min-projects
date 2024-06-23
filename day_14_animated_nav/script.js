@@ -1,7 +1,6 @@
-const nav = document.querySelector(".active");
-const arrow = document.querySelector(".open");
+const nav = document.getElementById("nav");
+const button = document.getElementById("toggle");
 
-arrow.addEventListener("click", () => {
+button.addEventListener("click", () => {
 	nav.classList.toggle("active");
-	arrow.classList.toggle("open");
 });

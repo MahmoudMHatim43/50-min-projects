@@ -11,96 +11,122 @@
 body {
     /* design */
     font-family: "Playwrite DE Grund", cursive;
+    font-size: 14px;
     background-color: #c3cbdc;
-    background-image: linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%);
+    background-image: linear-gradient(180deg, #c3cbdc 0%, #edf1f4 74%);
     text-align: center;
     /* layout and box-model */
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     /* size */
     width: 100vw;
-    height: 500vh;
+    height: 100vh;
     /* position */
     position: relative;
 }
 
 nav {
     /* design */
-    font-size: 14px;
-    background-color: rgba(0, 70, 255, 0.25);
+    background-color: #2b4162;
+    background-image: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
+    background-color: white;
     border-radius: 25px;
-    box-shadow: 1px 1px 5px, -1px -1px 5px white;
+    box-shadow: 0px 2px 5px green, -1px -1px 5px white;
     /* layout and box-model */
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /* size */
-    width: 100px;
-    /* position */
-    position: fixed;
-    top: 10px;
-    left: 100px;
+    width: 60px;
     /* animation */
-    transition: 1s ease;
-}
-
-nav li {
-    transition: 1s ease 1s;
-    display: none;
+    transition: width 1s ease;
 }
 
 nav.active {
-    /* design */
-    overflow: hidden;
-    font-size: 14px;
-    background-color: rgba(0, 70, 255, 0.25);
-    border-radius: 25px;
-    /* layout and box-model */
-    display: inline-flex;
-    align-items: center;
-    gap: 10%;
-    padding: 10px;
-    /* size */
-    width: 90%;
-    /* position */
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    /* animation */
-    transition: 2s ease;
+    width: 370px;
 }
 
-nav.active li {
-    display: block;
-}
-
-li,
-a,
-img {
+nav ul {
     /* design */
-    text-decoration: none;
-    color: black;
+    display: flex;
     list-style: none;
+    /* size */
+    width: 0;
+    /* animation */
+    transition: width 1s ease;
 }
 
-.fa-chevron-up {
+nav.active ul {
+    /* size */
+    width: 100%;
+}
+
+nav ul li {
     /* design */
+    opacity: 0;
+    /* animatoin */
+    transform: rotateY(0deg);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+nav.active ul li {
+    /* design */
+    opacity: 1;
+    /* animation */
+    transform: rotateY(360deg);
+}
+
+nav ul a {
+    /* design */
+    color: white;
+    text-decoration: none;
+    /* layout and box-model */
+    margin: 0 15px;
+}
+
+.icon {
+    /* desing */
     cursor: pointer;
+    background-color: transparent;
+    border: none;
+    /* position */
+    position: relative;
+    /* size */
+    height: 30px;
+    width: 30px;
+}
+
+.icon:focus {
+    /* design */
+    outline: none;
+}
+
+.icon .line {
+    /* design */
+    background-color: white;
+    /* size */
+    width: 20px;
+    height: 2px;
     /* position */
     position: absolute;
-    right: 10px;
-    top: 40%;
-    transform: rotate(90deg);
-    /* animation */
-    transition: 2s ease;
+    top: 10px;
+    left: 0px;
+    /* animaiton */
+    transition: transform 0.6s linear;
 }
 
-.fa-chevron-up.open {
-    /* design */
-    cursor: pointer;
+.icon .line2 {
     /* position */
-    transform: rotate(-90deg);
-    /* animation */
-    transition: 1s ease;
+    top: auto;
+    bottom: 10px;
+}
+
+nav.active .icon .line1 {
+    transform: rotate(-765deg) translateY(5.5px);
+}
+
+nav.active .icon .line2 {
+    transform: rotate(765deg) translateY(-5.5px);
 }
