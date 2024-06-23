@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap");
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --header-color: rgb(0, 0, 0, 0.2);
+    --primary-color: #e1e1e1;
+    --secondary-color: rgb(55, 59, 105, 0.9);
+}
+
+body {
+    /* design */
+    font-family: "Playwrite DE Grund", cursive;
+    font-size: 14px;
+    background-color: var(--primary-color);
+    /* layout and box-model */
+    margin-top: 70px;
+    /* size */
+    /* position */
+    position: relative;
+}
+
+header {
+    /* design */
+    background-color: var(--header-color);
+    backdrop-filter: blur(5px);
+    box-shadow: 1px 1px 5px, -1px -1px 5px white;
+    border-radius: 25px;
+    /* layout and box-model */
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    /* size */
+    width: 90%;
+    /* position */
+    position: fixed;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.search {
+    /* design */
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    /* layout and box-model */
+    padding: 5px;
+}
+
+main {
+    /* layout and box-model */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.movie {
+    /* desing */
+    cursor: pointer;
+    overflow: hidden;
+    background-color: var(--secondary-color);
+    box-shadow: 1px 1px 5px, -1px -1px 5px white;
+    border-radius: 15px;
+    color: #e1e1e1;
+    /* layout and box-model */
+    /* size */
+    width: 200px;
+    /* position */
+    position: relative;
+}
+
+.movie img {
+    padding: 10px;
+    border-radius: 25px;
+    width: 100%;
+}
+
+.movie h3 {
+    padding: 10px;
+}
+
+.movie_info span {
+    /* design */
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    /* layout and box-model */
+    padding: 5px;
+    /* position */
+    position: absolute;
+    right: 10px;
+    top: 0;
+    transform: translateY(50%);
+}
+
+.movie_info span.green {
+    border: none;
+    color: white;
+    background-color: green;
+}
+
+.movie_info span.orange {
+    border: none;
+    color: white;
+    background-color: orange;
+}
+
+.movie_info span.red {
+    border: none;
+    color: white;
+    background-color: red;
+}
+
+.movie_overview {
+    /* desing */
+    background-color: rgb(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    color: black;
+    font-size: 12px;
+    /* layout and box model */
+    padding: 10px;
+    /* position */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    transform: translateY(101%);
+    transition: transform 0.5s ease-in;
+}
+
+.movie:active .movie_overview {
+    transform: translateY(0%);
+    transition: transform 0.5s ease-in;
+}
