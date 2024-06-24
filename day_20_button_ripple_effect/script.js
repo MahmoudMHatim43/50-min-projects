@@ -20,4 +20,6 @@ btn.addEventListener("click", eve => {
 	circle.style.top = `${positionTop}px`;
 	//append the circle to the button element
 	btn.appendChild(circle);
+	//remove circle
+	setTimeout(() => circle.remove(), 500);
 });
