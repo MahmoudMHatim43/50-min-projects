@@ -1,9 +1,6 @@
 // variables used for connecting with the API
 const myApiKey = "af5e7fd345d26ed4958fa3ec67dab3b6"; // my key from tmdb
-const searchApi =
-	"https://api.themoviedb.org/3/search/movie?api_key=" +
-	myApiKey +
-	"&query='"; // &qurery=' to add our value of the search box;
+const searchApi = "https://api.themoviedb.org/3/search/movie?api_key=" + myApiKey + "&query="; // add our value of the search box
 const mostPopularMovies_ApiUrl =
 	"https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=" +
 	myApiKey +
@@ -23,12 +20,13 @@ getMovies(mostPopularMovies_ApiUrl);
 async function getMovies(url) {
 	const res = await fetch(url);
 	const data = await res.json();
+	console.log(data);
 	// append results
 	showMovies(data.results);
 }
 function showMovies(movies) {
 	main.innerHTML = "";
-	movies.forEach((movie) => {
+	movies.forEach(movie => {
 		const { title, overview, poster_path, vote_average } = movie;
 		const movieEl = document.createElement("div");
 		movieEl.classList.add("movie_card");
@@ -38,9 +36,7 @@ function showMovies(movies) {
           alt="movie cover">
         </div>
         <h3 class="movie_title">${title}</h3>
-        <div class="movie_rate ${rateColor(
-			vote_average
-		)}">${vote_average.toFixed(1)}</div>
+        <div class="movie_rate ${rateColor(vote_average)}">${vote_average.toFixed(1)}</div>
         <div class="movie_overview">
         <h3>overview</h3>
         ${overview}
@@ -59,7 +55,7 @@ function showMovies(movies) {
 }
 
 // searching
-form.addEventListener("submit", (eve) => {
+form.addEventListener("submit", eve => {
 	eve.preventDefault();
 	const searchTerm = search.value;
 	if (searchTerm && searchTerm !== "") {

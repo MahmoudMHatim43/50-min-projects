@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: white;
+    --secondary-color: black;
+    --minute-needle: dodgerblue;
+    --seconds-needle: red;
+}
+
+html {
+    /* animation */
+    transition: all 1s ease-in;
+}
+
+html.dark {
+    --primary-color: black;
+    --secondary-color: white;
+}
+
+html.dark {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    transition: all 1s ease-in;
+}
+
+body {
+    /* design */
+    font-family: 'Vollkorn';
+    overflow: hidden;
+    /* layout and box-model */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* size */
+    width: 100vw;
+    height: 100vh;
+    /* position */
+    position: relative;
+    /* animation */
+    transition: 0.5s ease;
+}
+
+.mode {
+    /* design */
+    cursor: pointer;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    box-shadow: 0px 3px 5px var(--secondary-color), 0px -3px 5px var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    /* layout and box-model */
+    padding: 10px 20px;
+    /* position */
+    position: absolute;
+    top: 50px;
+    /* animation */
+    transition: 0.2s ease;
+}
+
+.mode:active {
+    /* layout and box-model */
+    padding: 11px 21px;
+    /* animation */
+    transition: 0.2s ease;
+}
+
+
+.clock_container {
+    /* layout and box-model */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    /* size */
+    /* position */
+    position: relative;
+}
+
+.clock {
+    overflow: hidden;
+    background-color: var(--secondary-color);
+    border: 5px solid var(--secondary-color);
+    box-shadow: 1px 3px 5px var(--secondary-color), -1px -3px 5px var(--primary-color);
+    border-radius: 50%;
+    /* size */
+    width: 300px;
+    height: 300px;
+    /* position */
+    position: relative;
+}
+
+.needle {
+    /* desing */
+    background-color: var(--primary-color);
+    /* layout and box-model */
+    /* size */
+    width: 3px;
+    height: 70px;
+    /* positon */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: bottom center;
+    /* animation */
+}
+
+.needle.hour {
+    /* design */
+    background-color: var(--primary-color);
+    /* position */
+    transform: translate(-50%, -100%) rotate(0deg);
+    /* animation */
+    transition: 1s ease;
+}
+
+.needle.minute {
+    /* design */
+    background-color: var(--minute-needle);
+    /* position */
+    transform: translate(-50%, -100%) rotate(60deg);
+    /* size */
+    height: 120px;
+    /* animation */
+    transition: 1s ease;
+}
+
+.needle.seconds {
+    /* design */
+    background-color: var(--seconds-needle);
+    /* position */
+    transform: translate(-50%, -100%) rotate(90deg);
+    /* size */
+    height: 145px;
+    /* animation */
+    transition: 0.5s ease;
+}
+
+.center {
+    /* design */
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    /* layout and box-model */
+    padding: 6px;
+    /* positon */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center::after {
+    content: '';
+    /* design */
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    /* positon */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* size */
+    width: 70%;
+    height: 70%;
+}
+
+.digital {
+    /* design */
+    font-family: cursive;
+    font-weight: lighter;
+    font-size: 50px;
+}
+
+.date {
+    /* design */
+    border-left: 1px solid;
+    border-right: 1px solid;
+    font-size: 20px;
+}
+
+.digital,
+.date {
+    /* design */
+    color: var(--secondary-color);
+    /* layout and box-model */
+    padding: 5px;
+    margin: 15px;
+}
