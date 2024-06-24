@@ -1,0 +1,63 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: steelblue;
+    --empty-box-bg-color: white;
+    --empty-box-bg-color-hover: black;
+}
+
+body {
+    /* design */
+    font-family: 'Vollkorn';
+    background-color: var(--bg-color);
+    overflow: hidden;
+    /* layout and box-model */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* size */
+    width: 100vw;
+    height: 100vh;
+    /* animation */
+    transition: 0.5s ease;
+}
+
+.empty_box {
+    cursor: pointer;
+    /* design */
+    overflow: hidden;
+    border: 3px solid black;
+    background-color: var(--empty-box-bg-color);
+    /* size */
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}
+
+.filled_box {
+    background-image: url('https://picsum.photos/150');
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.hold {
+    border: 5px solid white;
+}
+
+.hoverd {
+    background-color: var(--empty-box-bg-color-hover);
+}
+
+@media (max-width:800px) {
+    body {
+        flex-direction: column;
+    }
+}
