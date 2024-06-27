@@ -1,0 +1,60 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* design */
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    /* layout and box-model */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* animation */
+    transition: 0.5s ease;
+}
+
+.tut {
+    text-align: center;
+    margin: 20px;
+}
+
+i {
+    color: red;
+}
+
+.container {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+    display: flex;
+    border: none;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+}
+
+.container img {
+    max-height: 400px;
+}
+
+.red_heart {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.scale {
+    animation: love 0.5s linear;
+}
+
+@keyframes love {
+    to {
+        transform: scale(8);
+        opacity: 0;
+    }
+}
