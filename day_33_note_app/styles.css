@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* design */
+    font-family: 'Muli', sans-serif;
+    background-color: #252525;
+    color: white;
+    /* layout  */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 auto;
+    width: 85vw;
+    /* position */
+    position: relative;
+}
+
+.add_btn button {
+    /* design */
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    background-color: orange;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    box-shadow: 1px 1px 3px rgb(255, 255, 255, 0.6);
+    /* layout */
+    padding: 7.5px 10px;
+    /* position */
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    /* animation */
+    transition: transform 0.1s linear;
+}
+
+.add_btn button:active {
+    /* animation */
+    transform: scale(0.98);
+}
+
+.notes_container {
+    /* layout */
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    /* size */
+    width: 100%;
+}
+
+.note {
+    /* design */
+    overflow: hidden;
+    box-shadow: 1px 1px 5px rgb(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 300px;
+    border-radius: 10px;
+    /* layout */
+    margin: 5px;
+}
+
+.tools {
+    /* design */
+    background-color: rgb(255, 210, 130);
+    /* layout */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tools button {
+    /* desing */
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    margin: 2.5px;
+}
+
+.body {
+    /* desing */
+    color: black;
+    background-color: #e1e1e1;
+    padding: 10px;
+    height: 300px;
+}
+
+.txt_area {
+    /* design */
+    background-color: palegoldenrod;
+    font-family: inherit;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    /* layout */
+    padding: 10px;
+    /* size */
+    min-width: 100%;
+    height: 300px;
+}
+
+.hide {
+    display: none;
+}
