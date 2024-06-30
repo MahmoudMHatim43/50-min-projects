@@ -4,17 +4,16 @@ const rightBtn = document.querySelector("#right");
 const images = document.querySelectorAll("img");
 
 let x = 0;
-let length = (images.length - 1) * 100;
 leftBtn.addEventListener("click", () => {
 	x += 100;
 	if (x > 0) {
-		x = -length;
+		x = -(images.length - 1) * 100;
 	}
 	imageContainer.style.transform = `translateX(${x}%)`;
 });
 rightBtn.addEventListener("click", () => {
 	x -= 100;
-	if (x < length) {
+	if (x < -(images.length - 1) * 100) {
 		x = 0;
 	}
 	imageContainer.style.transform = `translateX(${x}%)`;
