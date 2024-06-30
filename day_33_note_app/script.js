@@ -5,6 +5,12 @@ const savedNotes = JSON.parse(localStorage.getItem("notes"));
 if (savedNotes) {
 	savedNotes.forEach(savedNote => createNewNote(savedNote));
 }
+// clear button functions
+const clearBtn = document.getElementById("clear_btn");
+clearBtn.addEventListener("click", () => {
+	clearLS();
+	window.location.reload();
+});
 // add button functions
 addBtn.addEventListener("click", () => createNewNote());
 function createNewNote(text = "") {
@@ -50,4 +56,7 @@ function updateLS() {
 	const notesArr = [];
 	notes.forEach(note => notesArr.push(note.value));
 	localStorage.setItem("notes", JSON.stringify(notesArr));
+}
+function clearLS() {
+	localStorage.clear();
 }
