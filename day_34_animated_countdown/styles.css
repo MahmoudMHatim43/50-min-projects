@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* design */
+    font-family: 'Muli', sans-serif;
+    background-color: #252525;
+    color: white;
+    /* position */
+    position: relative;
+}
+
+.start,
+.end {
+    overflow: hidden;
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+}
+
+.start {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.end {
+    font-size: 50px;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.end button {
+    cursor: pointer;
+    font-size: 20px;
+    background-color: orange;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+.numbers {
+    overflow: hidden;
+    position: relative;
+    color: #5fbcda;
+    font-size: 60px;
+    height: 70px;
+    margin: 0 5px;
+}
+
+.numbers span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: bottom center;
+    transform: translate(-50%, -50%) rotate(130deg) scale(1);
+}
+
+.hide {
+    transform: translate(-50%, -50%) scale(0);
+    animation: hide 0.5s ease-out;
+}
+
+.show {
+    transform: translate(-50%, -50%) scale(1);
+    animation: show 0.5s ease-in;
+}
+
+.numbers span.in {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+    animation: goIn 0.5s ease-in;
+}
+
+.numbers span.out {
+    transform: translate(-50%, -50%) rotate(-130deg);
+    animation: goOut 0.5s ease-out;
+}
+
+@keyframes show {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    30% {
+        transform: translate(-50%, -50%) scale(0.5)
+    }
+
+    60% {
+        transform: translate(-50%, -50%) scale(0.25)
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1)
+    }
+}
+
+@keyframes hide {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    30% {
+        transform: translate(-50%, -50%) scale(0.25);
+    }
+
+    60% {
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+}
+
+@keyframes goIn {
+    0% {
+        transform: translate(-50%, -50%) rotate(130deg) scale(1);
+    }
+
+    30% {
+        transform: translate(-50%, -50%) rotate(30deg) scale(1.4);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(30deg) scale(1s);
+    }
+}
+
+@keyframes goOut {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) scale(1);
+    }
+
+    30% {
+        transform: translate(-50%, -50%) rotate(-30deg) scale(1.4);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(-130deg) scale(1s);
+    }
+}
