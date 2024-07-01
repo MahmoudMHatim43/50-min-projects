@@ -29,7 +29,6 @@ async function getPokemons(amount) {
 async function getPokemon(id) {
 	const promise = await fetch(`${API}/pokemon/${id}`);
 	const jsonData = await promise.json();
-	console.log(promise, jsonData);
 	createPokemonCard(jsonData);
 }
 
@@ -45,7 +44,7 @@ function createPokemonCard(data) {
       <!--  info -->
       <div class="info">
         <h4>${data.name[0].toUpperCase() + data.name.slice(1)}</h4>
-        <h4># ${data.id.toString().padStart(3, "0")}</h4>
+        <h4>#${data.id.toString().padStart(3, "0")}</h4>
         <h4>${dataTypes[0]}</h4>
       </div>
     `;
