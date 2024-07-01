@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* design */
+    background-image: url('https://wallpaperset.com/w/full/5/4/6/517268.jpg');
+    background-position: center center;
+    background-size: cover;
+    backdrop-filter: blur(20px);
+    font-family: 'Muli', sans-serif;
+    /* layout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* size */
+    width: 100vw;
+    height: 100vh;
+    transition: backdrop-filter 0.5s ease;
+}
