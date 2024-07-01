@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* design */
+    color: white;
+    background: linear-gradient(to right, #291856, #B887FF);
+    font-family: 'Muli', sans-serif;
+    /* layout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* size */
+    width: 100vw;
+    height: 100vh;
+}
+
+.phone {
+    /* design */
+    border: 2px solid;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6), -2px -2px 5px rgba(0, 0, 0, 0.6);
+    /* layout */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 10px;
+    /* size */
+    width: 250px;
+    height: 500px;
+    /* position */
+    position: relative;
+}
+
+.pages {
+    /* design */
+    background-color: black;
+    overflow: hidden;
+    /* position */
+    position: relative;
+    /* size */
+    height: 100%;
+}
+
+.pages .content {
+    opacity: 0;
+    object-fit: cover;
+    transition: opacity 1s ease;
+}
+
+.pages .content.show {
+    opacity: 1;
+    transition: 1s ease;
+}
+
+img {
+    /* position */
+    position: absolute;
+    /* size */
+    left: 0;
+    transform: translateX(-50%);
+    height: 100%;
+}
+
+ul {
+    /* design */
+    background-color: rgba(255, 255, 255, 0.605);
+    backdrop-filter: blur(5px);
+    color: rgb(65, 130, 205);
+    /* layout */
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+i {
+    /* design */
+    cursor: pointer;
+}
