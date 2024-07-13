@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /* design */
+  background-color: #e1e1e1;
+  font-family: "Lato", sans-serif;
+  /* size */
+  height: 100vh;
+  /* postion */
+  position: relative;
+}
+.container {
+  /* design */
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px auto;
+  padding: 10px;
+  /* size */
+  max-width: 500px;
+  min-width: 40%;
+}
+.answers {
+  align-self: flex-start;
+  padding: 40px;
+}
+.answers ul {
+  list-style: none;
+}
+.answers li {
+  margin: 5px 0;
+}
+#submit {
+  /* design */
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  font-size: 18px;
+  border: none;
+  background-color: lightcoral;
+  /* layout */
+  padding: 5px;
+  /* size */
+  width: 80%;
+  /* animation */
+  transition: 0.5s ease-in-out;
+}
+#submit:active {
+  width: 70%;
+}
