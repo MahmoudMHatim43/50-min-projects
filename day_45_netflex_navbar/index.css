@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /* design */
+  background-color: #e1e1e1;
+  font-family: "Lato", sans-serif;
+  /* size */
+  height: 100vh;
+  /* postion */
+  position: relative;
+}
+/* buttons */
+button {
+  /* design */
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 25px;
+  /* positon */
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+/* navbar */
+.side-nav {
+  /* size */
+  height: 100%;
+  width: 40%;
+  /* position */
+  position: absolute;
+  left: -40%;
+  /* animation */
+  transition: 0.3s ease-in-out;
+}
+.black {
+  /* design */
+  background-color: black;
+  /* size */
+  height: 100%;
+  width: 100%;
+}
+.red {
+  /* design */
+  background-color: red;
+  /* size */
+  height: 100%;
+  width: 0%;
+  /* animation */
+  transition: width 0.3s ease-in-out;
+}
+.red.active {
+  width: 95%;
+  transition: width 0.3s ease-in-out 0.3s;
+}
+.white {
+  /* design */
+  overflow: hidden;
+  background-color: white;
+  /* size */
+  height: 100%;
+  width: 0%;
+  /* position */
+  position: relative;
+  /* animation */
+  transition: width 0.3s ease-in-out;
+}
+.white.active {
+  width: 95%;
+  transition: width 0.3s ease-in-out 0.6s;
+}
+/* list and logo */
+.logo {
+  /* size */
+  width: 150px;
+  /* postion */
+  position: absolute;
+  top: -50px;
+  right: -20px;
+}
+.profile {
+  /* design */
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.main-list {
+  /* design */
+  font-weight: bold;
+  list-style: none;
+  letter-spacing: 1px;
+  line-height: 30px;
+  /* position */
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 50px;
+}
+.main-list li {
+  /* layout */
+  margin: 0px 0px 0px 20px;
+}
+.main-list ul {
+  /* design */
+  border-top: 1px solid #e1e1e1;
+  font-weight: normal;
+  list-style: none;
+  /* layout */
+  margin: 0px 0px 0px 30px;
+}
