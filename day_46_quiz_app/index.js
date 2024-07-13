@@ -23,6 +23,36 @@ const questions = [
     rightAnswer: "Jupiter",
     options: ["Saturn", "Mars", "Jupiter", "Uranus"],
   },
+  {
+    question: "CSS stands for Cascading Style Sheets.",
+    rightAnswer: "True",
+    options: ["True", "False", "Maybe", "All the above"],
+  },
+  {
+    question: "Which of the following is not a valid CSS property?",
+    rightAnswer: "background-color",
+    options: ["background-color", "color", "font-size", "text-align"],
+  },
+  {
+    question: "Which of the following is the correct CSS syntax for setting multiple properties?",
+    rightAnswer: "property1: value1; property2: value2;",
+    options: [
+      "property1: value1; property2: value2;",
+      "property1, value1; property2, value2;",
+      "property1: value1; property2: value2",
+      "property1, value1; property2, value2",
+    ],
+  },
+  {
+    question: "Which of the following is a JavaScript data type?",
+    rightAnswer: "string",
+    options: ["string", "number", "boolean", "object"],
+  },
+  {
+    question: "Which of the following is a way to declare a JavaScript variable?",
+    rightAnswer: "var myVariable;",
+    options: ["var myVariable;", "let myVariable;", "const myVariable;", "myVariable = undefined;"],
+  },
 ];
 let curr = 0;
 let score = 0;
@@ -31,14 +61,13 @@ setCurrQuestion();
 quiz();
 
 btn.addEventListener("click", () => {
-  if (curr < 4) {
+  curr++;
+  if (curr < questions.length) {
     quiz();
-    curr++;
     setCurrQuestion();
-    console.log(score, curr);
   } else {
     container.innerHTML = `
-    <h1>${score >= 3 ? "Congratualtion" : "Ooops! You Failed"}
+    <h1>${score >= curr / 2 + 1 ? "Congratualtion" : "Ooops! You Failed"}
     <h1>You Scored ${score} of ${curr}</h1>`;
   }
 });
@@ -46,12 +75,12 @@ btn.addEventListener("click", () => {
 function setCurrQuestion() {
   question.innerHTML = questions[curr].question;
   answers.forEach((answer, index) => {
-    answer.nextElementSibling.innerHTML = questions[curr].options[index];
+    answer.nextElementSibling.innerHTML = `${questions[curr].options[index]}`;
   });
 }
 function quiz() {
   answers.forEach((answer) => {
-    if (answer.checked && answer.nextElementSibling.innerHTML == questions[curr].rightAnswer) {
+    if (answer.checked && answer.nextElementSibling.innerHTML == `${questions[curr].rightAnswer}`) {
       score++;
     }
   });
